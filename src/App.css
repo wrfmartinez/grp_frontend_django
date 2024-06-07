@@ -2,6 +2,8 @@
 
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 #root {
@@ -9,61 +11,6 @@
   font-family: 'Noto Sans', system-ui, --apple-system, sans-serif;
 }
 
-/* HERO */
-
-body {
-  padding: 0;
-  margin: 0;
-}
-
-.hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-}
-
-.hero-title {
-  color: #FFF;
-  font-weight: 500;
-}
-
-.hero-subtitle {
-  color: #FFF;
-  font-weight: 400;
-  font-size: 1em;
-  width: 500px;
-  padding: 2em;
-  text-align: center;
-}
-
-/* MEDIUM SCREEN MEDIA QUERY */
-@media (min-width: 900px) and (max-width: 1600px) {
-  .hero {
-    display: block;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 2rem 4rem;
-  }
-
-  .hero-subtitle {
-    text-align: unset;
-    padding: 2rem 0;
-  }
-}
-
-/* LARGE SCREEN MEDIA QUERY */
-@media (min-width: 1600px) {
-  .hero {
-    display: block;
-    max-width: 1580px;
-    margin: 0 auto;
-    padding: 2rem;
-  }
-
-  .hero-subtitle {
-    text-align: unset;
-    padding: 2rem 0;
-  }
+main {
+  background-color: #FFF;
 }

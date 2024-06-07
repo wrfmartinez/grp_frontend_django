@@ -1,4 +1,6 @@
-const Banner = () => {
+import "./css/Hero.css"
+
+const Hero = () => {
     return (
         <header className="hero">
             <h1 className="hero-title">Shop Products</h1>
@@ -7,4 +9,4 @@ const Banner = () => {
     )
 }
 
-export default Banner
+export default Hero

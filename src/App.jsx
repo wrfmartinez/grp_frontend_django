@@ -1,13 +1,16 @@
-import './App.css'
-import Banner from './components/Banner'
+import "./App.css";
+import Hero from "./components/Hero";
+import Products from "./components/Products";
 
 function App() {
-
   return (
     <>
-      <Banner />
+      <Hero />
+      <main>
+        <Products />
+      </main>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
