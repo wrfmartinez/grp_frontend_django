@@ -1,18 +1,18 @@
-import { useNavigate } from 'react-router-dom';
+import { redirect } from 'react-router-dom';
 
 
-function Navbar( {setPageDisplay }) {
-    const navigate = useNavigate();
+function Navbar() {
+    // const navigate = useNavigate();
     return (
         <>
             <div className='navbar'>
                 <ul>
-                    <li onClick={() => setPageDisplay('home')}></li>    
-                    <li onClick={() => setPageDisplay('wood')}></li>
-                    <li onClick={() => setPageDisplay('lighting')}></li>
-                    <li onClick={() => setPageDisplay('appliances')}></li>
-                    <li onClick={() => setPageDisplay('landscaping')}></li>
-                    <li onClick={() => setPageDisplay('paint')}></li>
+                    <li onClick={() => redirect('/')}></li>    
+                    <li onClick={() => redirect('/wood')}></li>
+                    <li onClick={() => redirect('/lighting')}></li>
+                    <li onClick={() => redirect('/appliances')}></li>
+                    <li onClick={() => redirect('/landscaping')}></li>
+                    <li onClick={() => redirect('/paint')}></li>
                 </ul>
 
             </div>
