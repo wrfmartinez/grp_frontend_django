@@ -12,7 +12,6 @@
 }
 
 .product-display-grid {
-  background-color: yellow; /* FOR TESTING PURPOSES DELETE THIS LINE */
   display: grid;
   grid-template-columns: 1fr;
   justify-content: center;
