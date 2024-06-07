@@ -3,7 +3,8 @@
     display: flex;
     align-items: center;
     width: 200px;
-    border: 1px solid black;
+    border: 1px solid #949494;
+    border-radius: 5px;
     padding: 8px 2px;
 }
 
@@ -23,4 +24,8 @@
     background-color: transparent;
     font-weight: 400;
     font-size: 1em;
+}
+
+input {
+    outline-width: 0;
 }

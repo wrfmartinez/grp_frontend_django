@@ -1,21 +1,21 @@
 import "./App.css";
+import { Outlet } from "react-router-dom";
+import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import Product from "./components/Product";
+import Filter from "./components/Filter";
 import Products from "./components/Products";
-import Search from "./components/Search";
 
 function App() {
-  
-  
-
   return (
     <>
-     <main>
+      <main>
         <Navbar />
-        <Hero />
-        <Products />
+        <div className="home-hero">
+          <img className="home-logo" src="/totalhome.svg" alt="logo" />
+          <h1>Welcome to Total Home</h1>
+        </div>
       </main>
     </>
-  )
+  );
 }
-export default App
+export default App;

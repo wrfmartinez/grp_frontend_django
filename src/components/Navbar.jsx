@@ -1,23 +1,28 @@
-import { redirect } from 'react-router-dom';
-
+import "./css/Navbar.css";
+import { Link } from "react-router-dom";
+import Search from "./Search";
 
 function Navbar() {
-    // const navigate = useNavigate();
-    return (
-        <>
-            <div className='navbar'>
-                <ul>
-                    <li onClick={() => redirect('/')}></li>    
-                    <li onClick={() => redirect('/wood')}></li>
-                    <li onClick={() => redirect('/lighting')}></li>
-                    <li onClick={() => redirect('/appliances')}></li>
-                    <li onClick={() => redirect('/landscaping')}></li>
-                    <li onClick={() => redirect('/paint')}></li>
-                </ul>
-
-            </div>
-        </>
-    )
+  return (
+    <nav>
+      <div id="navbar">
+        <div className="nav-container">
+          <div className="nav-brand-container">
+            <Link to="/">
+              <img
+                className="nav-logo"
+                src="/totalhome.svg"
+                alt="totalhome logo"
+              />
+            </Link>
+            <h1 className="nav-brand">Total Home</h1>
+            <Link to="/shop-products">Shop Products</Link>
+          </div>
+          <Search />
+        </div>
+      </div>
+    </nav>
+  );
 }
 
-export default Navbar
+export default Navbar;

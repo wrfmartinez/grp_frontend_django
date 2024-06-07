@@ -7,15 +7,33 @@
 }
 
 #root {
-  background-color: black;
+  background-color: #9b9d9f;
   font-family: 'Noto Sans', system-ui, --apple-system, sans-serif;
 }
 
-main {
-  background-color: #FFF;
-  padding-bottom: 2rem;
+a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 button {
   cursor: pointer;
+}
+
+.home-logo {
+  width: 100px;
+}
+
+.home-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+  background-color: #FFF;
+  font-weight: 800;
 }

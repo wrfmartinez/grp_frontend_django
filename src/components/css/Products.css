@@ -1,4 +1,9 @@
 #products {
+    background-color: #FFF;
+    padding-bottom: 2rem;
+}
+
+.products-container {
     max-width: 1280px;
     margin: 0 auto;
 }
@@ -52,7 +57,7 @@
 }
 
 @media (min-width: 1600px) {
-    #products {
+    .products-container {
         max-width: 1580px;
     }
 

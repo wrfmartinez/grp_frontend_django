@@ -1,25 +1,68 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import Products from './components/Products.jsx'
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import App from "./App.jsx";
+import ErrorPage from "./ErrorPage.jsx";
+import Products from "./components/Products.jsx";
+import Product from "./components/Product";
+import AllProducts from "./components/AllProducts.jsx";
 
 const router = createBrowserRouter([
-  { path: "/", element: <App /> },
-  { path: "/wood", element: <Products /> },
-  { path: "/lighting", element: <Products /> },
-  { path: "/appliances", element: <Products /> },
-  { path: "/landscaping", element: <Products /> },
-  { path: "/paint", element: <Products /> }
+  {
+    path: "/",
+    element: <App />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/shop-products",
+    element: <AllProducts />,
+    children: [
+      {
+        path: "shop-products/wood",
+        element: <Products />,
+      },
+      {
+        path: "shop-products/lighting",
+        element: <Products />,
+      },
+      {
+        path: "shop-products/appliances",
+        element: <Products />,
+      },
+      {
+        path: "shop-products/landscaping",
+        element: <Products />,
+      },
+      {
+        path: "shop-products/paint",
+        element: <Products />,
+      },
+    ],
+  },
+  {
+    path: "shop-products/wood/:woodId",
+    element: <Product />,
+  },
+  {
+    path: "shop-products/lighting/:lightingId",
+    element: <Product />,
+  },
+  {
+    path: "shop-products/appliances/:appliancesId",
+    element: <Product />,
+  },
+  {
+    path: "shop-products/landscaping/:landscapingId",
+    element: <Product />,
+  },
+  {
+    path: "shop-products/paint/:paintId",
+    element: <Product />,
+  },
 ]);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <RouterProvider router={router} />
-      <App />
-    <App />
-  </React.StrictMode>,
-)
+  </React.StrictMode>
+);
