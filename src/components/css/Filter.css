@@ -32,6 +32,17 @@
     content: "";
 }
 
+.inactive {
+    border-radius: 5px;
+    padding: 8px 15px;
+}
+
+.active {
+    background-color: #4c4d4f;
+    border-radius: 5px;
+    padding: 8px 15px;
+}
+
 @media (min-width: 900px) and (max-width: 1600px) {
     .categories {
         justify-content: flex-start;
