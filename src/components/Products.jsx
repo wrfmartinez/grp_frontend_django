@@ -1,98 +1,35 @@
 import "./css/Products.css";
+import productsAPI from "../services/productsAPI";
+import { useLocation } from "react-router-dom";
 
 const Products = () => {
+  const location = useLocation();
+  const productsList = productsAPI.show();
+
+  const filterProducts = () => {
+    const category = location.pathname.split('/').pop();
+    if (category === "shop-products" || category === "all") {
+      return productsList;
+    }
+    return productsList.filter(product => product.category.toLowerCase().includes(category));
+  };
+
+  const filteredProducts = filterProducts();
+
   return (
     <section id="products">
       <div className="products-container">
         <div className="products-grid">
-          <div className="product-container">
-            <div className="product-img-container">
-              <img className="product-img" src="" alt=""></img>
+          {filteredProducts.map((product, index) => (
+            <div className="product-container" key={index}>
+              <div className="product-img-container">
+                <img className="product-img" src={product.url} alt={product.desc}></img>
+              </div>
+              <h3 className="product-title">{product.title}</h3>
+              <p className="product-desc">{product.desc}</p>
+              <p className="product-price">${product.price}</p>
             </div>
-            <h3 className="product-title">Item 1</h3>
-            <p className="product-desc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Mi
-              quis hendrerit dolor magna eget est lorem.
-            </p>
-          </div>
-          <div className="product-container">
-            <div className="product-img-container">
-              <img className="product-img" src="" alt=""></img>
-            </div>
-            <h3 className="product-title">Item 2</h3>
-            <p className="product-desc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Mi
-              quis hendrerit dolor magna eget est lorem.
-            </p>
-          </div>
-          <div className="product-container">
-            <div className="product-img-container">
-              <img className="product-img" src="" alt=""></img>
-            </div>
-            <h3 className="product-title">Item 3</h3>
-            <p className="product-desc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Mi
-              quis hendrerit dolor magna eget est lorem.
-            </p>
-          </div>
-          <div className="product-container">
-            <div className="product-img-container">
-              <img className="product-img" src="" alt=""></img>
-            </div>
-            <h3 className="product-title">Item 4</h3>
-            <p className="product-desc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Mi
-              quis hendrerit dolor magna eget est lorem.
-            </p>
-          </div>
-          <div className="product-container">
-            <div className="product-img-container">
-              <img className="product-img" src="" alt=""></img>
-            </div>
-            <h3 className="product-title">Item 5</h3>
-            <p className="product-desc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Mi
-              quis hendrerit dolor magna eget est lorem.
-            </p>
-          </div>
-          <div className="product-container">
-            <div className="product-img-container">
-              <img className="product-img" src="" alt=""></img>
-            </div>
-            <h3 className="product-title">Item 6</h3>
-            <p className="product-desc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Mi
-              quis hendrerit dolor magna eget est lorem.
-            </p>
-          </div>
-          <div className="product-container">
-            <div className="product-img-container">
-              <img className="product-img" src="" alt=""></img>
-            </div>
-            <h3 className="product-title">Item 7</h3>
-            <p className="product-desc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Mi
-              quis hendrerit dolor magna eget est lorem.
-            </p>
-          </div>
-          <div className="product-container">
-            <div className="product-img-container">
-              <img className="product-img" src="" alt=""></img>
-            </div>
-            <h3 className="product-title">Item 8</h3>
-            <p className="product-desc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Mi
-              quis hendrerit dolor magna eget est lorem.
-            </p>
-          </div>
+          ))}
         </div>
       </div>
     </section>

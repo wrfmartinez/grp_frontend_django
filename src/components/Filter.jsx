@@ -6,7 +6,9 @@ const Filter = () => {
   const location = useLocation();
 
   const isActive = (path) => {
-    return location.pathname.includes(path);
+    const locationSplit = location.pathname.split('/');
+    const pathEndpoint = locationSplit[locationSplit.length - 1]
+    return pathEndpoint.includes(path);
   };
 
   return (
@@ -15,8 +17,8 @@ const Filter = () => {
         <li className="category">
           <Link
             className={`${
-              isActive("shop-products/all") ? "active" : "inactive"
-            }`}
+              isActive("all") || isActive("shop-products") ? "active" : "inactive"
+            } all`}
             to="shop-products/all"
           >
             All
@@ -25,7 +27,7 @@ const Filter = () => {
         <li className="category">
           <Link
             className={`${
-              isActive("shop-products/wood") ? "active" : "inactive"
+              isActive("wood") ? "active" : "inactive"
             }`}
             to="shop-products/wood"
           >
@@ -35,7 +37,7 @@ const Filter = () => {
         <li className="category">
           <Link
             className={`${
-              isActive("shop-products/lighting") ? "active" : "inactive"
+              isActive("lighting") ? "active" : "inactive"
             }`}
             to="shop-products/lighting"
           >
@@ -45,7 +47,7 @@ const Filter = () => {
         <li className="category">
           <Link
             className={`${
-              isActive("shop-products/appliances") ? "active" : "inactive"
+              isActive("appliances") ? "active" : "inactive"
             }`}
             to="shop-products/appliances"
           >
@@ -55,7 +57,7 @@ const Filter = () => {
         <li className="category">
           <Link
             className={`${
-              isActive("shop-products/landscaping") ? "active" : "inactive"
+              isActive("landscaping") ? "active" : "inactive"
             }`}
             to="shop-products/landscaping"
           >
@@ -65,7 +67,7 @@ const Filter = () => {
         <li className="category">
           <Link
             className={`${
-              isActive("shop-products/paint") ? "active" : "inactive"
+              isActive("paint") ? "active" : "inactive"
             }`}
             to="shop-products/paint"
           >
