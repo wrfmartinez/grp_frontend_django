@@ -5,14 +5,17 @@ import Products from "./components/Products";
 import Search from "./components/Search";
 
 function App() {
+  
+  
+
   return (
     <>
-      <Hero />
-      <main>
+     <main>
+        <Navbar />
+        <Hero />
         <Products />
       </main>
     </>
-  );
+  )
 }
-
-export default App;
+export default App
