@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import { useState,useEffect } from 'react'
@@ -47,3 +48,23 @@ function App() {
   )
 }
 export default App
+=======
+import "./App.css";
+import Hero from "./components/Hero";
+import Product from "./components/Product";
+import Products from "./components/Products";
+
+function App() {
+  return (
+    <>
+      {/* <Hero /> */}
+      <main>
+        {/* <Products /> */}
+        <Product />
+      </main>
+    </>
+  );
+}
+
+export default App;
+>>>>>>> 4176ab0c1ebc96c847e405f0626ae7f743221186
