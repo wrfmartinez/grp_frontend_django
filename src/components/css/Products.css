@@ -47,7 +47,8 @@
   }
 
   .product-title,
-  .product-desc {
+  .product-desc,
+  .product-price {
     padding: 2rem 0.9rem 0 0.9rem;
   }
 }
