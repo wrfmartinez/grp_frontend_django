@@ -13,4 +13,9 @@
 
 main {
   background-color: #FFF;
+  padding-bottom: 2rem;
+}
+
+button {
+  cursor: pointer;
 }

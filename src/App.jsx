@@ -1,13 +1,15 @@
 import "./App.css";
 import Hero from "./components/Hero";
+import Product from "./components/Product";
 import Products from "./components/Products";
 
 function App() {
   return (
     <>
-      <Hero />
+      {/* <Hero /> */}
       <main>
-        <Products />
+        {/* <Products /> */}
+        <Product />
       </main>
     </>
   );
