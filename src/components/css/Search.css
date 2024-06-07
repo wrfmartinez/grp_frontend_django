@@ -1,0 +1,26 @@
+#search {
+    background-color: white; /* HERE FOR TESTING PURPOSES DELETE THIS LINE */
+    display: flex;
+    align-items: center;
+    width: 200px;
+    border: 1px solid black;
+    padding: 8px 2px;
+}
+
+.search-btn {
+    color: black;
+    background-color: transparent;
+    border: none;
+    width: 20px;
+}
+
+.fa-magnifying-glass {
+    color: black;
+}
+
+.search-text {
+    border: none;
+    background-color: transparent;
+    font-weight: 400;
+    font-size: 1em;
+}
