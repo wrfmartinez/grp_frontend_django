@@ -1,5 +1,4 @@
 import "./css/Filter.css";
-import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const Filter = () => {
