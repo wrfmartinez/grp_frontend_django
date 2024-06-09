@@ -37,3 +37,12 @@ button {
   background-color: #FFF;
   font-weight: 800;
 }
+
+.btn.shop-products {
+  color: #FFF;
+  background-color: orange;
+}
+
+.btn.shop-products:hover {
+  background-color: darkorange;
+}

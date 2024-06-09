@@ -1,5 +1,5 @@
 import "./App.css";
-import { Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Filter from "./components/Filter";
@@ -13,6 +13,7 @@ function App() {
         <div className="home-hero">
           <img className="home-logo" src="/totalhome.svg" alt="logo" />
           <h1>Welcome to Total Home</h1>
+          <Link className="btn shop-products" to="/shop-products">Shop Products</Link>
         </div>
       </main>
     </>

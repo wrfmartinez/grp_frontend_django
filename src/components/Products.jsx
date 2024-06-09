@@ -34,7 +34,7 @@ const Products = () => {
   }, []);
 
   const filterProductsByCategory = (category) => {
-    if (category === "all") {
+    if (category === "all" || category === "shop-products") {
       return products;
     } else {
       return categorizedProducts[category] || [];

@@ -16,7 +16,7 @@ const Filter = () => {
         <li className="category">
           <Link
             className={`${
-              isActive("all") || isActive("shop-products") ? "active" : "inactive"
+              isActive("shop-products") || isActive("all")  ? "active" : "inactive"
             } all`}
             to="shop-products/all"
           >
