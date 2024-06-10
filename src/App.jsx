@@ -1,9 +1,6 @@
 import "./App.css";
 import { Link } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Filter from "./components/Filter";
-import Products from "./components/Products";
 
 function App() {
   return (

@@ -4,7 +4,6 @@ const show = async (endpoint) => {
   try {
     const res = await fetch(`${BASE_URL}/${endpoint}`);
     const data = await res.json();
-    console.log(data);
     return data;
   } catch (err) {
     console.error(err);
@@ -12,4 +11,3 @@ const show = async (endpoint) => {
 };
 
 export default { show };
-// show();

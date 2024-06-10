@@ -4,7 +4,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App.jsx";
 import ErrorPage from "./ErrorPage.jsx";
 import Products from "./components/Products.jsx";
-import Product from "./components/Product";
 import AllProducts from "./components/AllProducts.jsx";
 
 const router = createBrowserRouter([
@@ -46,27 +45,7 @@ const router = createBrowserRouter([
         element: <Products />,
       },
     ],
-  },
-  {
-    path: "shop-products/wood/:woodId",
-    element: <Product />,
-  },
-  {
-    path: "shop-products/lighting/:lightingId",
-    element: <Product />,
-  },
-  {
-    path: "shop-products/appliances/:appliancesId",
-    element: <Product />,
-  },
-  {
-    path: "shop-products/landscaping/:landscapingId",
-    element: <Product />,
-  },
-  {
-    path: "shop-products/paint/:paintId",
-    element: <Product />,
-  },
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

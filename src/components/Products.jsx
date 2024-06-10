@@ -6,6 +6,7 @@ const Products = () => {
   const [products, setProducts] = useState([]);
   const [categorizedProducts, setCategorizedProducts] = useState([]);
 
+  // Fetching original productsAPI structure with Categories as keys and their values being an array of objects specific to the category
   const fetchCategorizedProducts = async () => {
     const endpoint = "all-products";
     try {
@@ -16,6 +17,7 @@ const Products = () => {
     }
   };
 
+  // Fetching all products as a flat array with objects in it
   const fetchAllProducts = async () => {
     const endpoint = "all-products";
     try {
@@ -41,6 +43,7 @@ const Products = () => {
     }
   };
 
+  // Taking the last value in the url path as the category and passing it to the filterProductsByCategory function
   const filteredProducts = filterProductsByCategory(
     location.pathname.split("/").pop()
   );

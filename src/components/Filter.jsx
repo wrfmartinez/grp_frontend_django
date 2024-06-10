@@ -4,6 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 const Filter = () => {
   const location = useLocation();
 
+  // Returning the last value of the url path
   const isActive = (path) => {
     const locationSplit = location.pathname.split('/');
     const pathEndpoint = locationSplit[locationSplit.length - 1]
